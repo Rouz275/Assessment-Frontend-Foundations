@@ -2,6 +2,7 @@
 
 body {
   font-family: "Lato", sans-serif;
+  width:100%;
 }
 
 h2 {
@@ -31,7 +32,8 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 /* ---  Groups & Items --- */
@@ -39,6 +41,10 @@ main img {
 .group {
   display: flex;
   flex-direction: column;
+}
+
+.padding {
+  align-items: center;
 }
 
 .item {
@@ -62,6 +68,21 @@ header {
   font-family: "Pangolin", cursive;
   font-size: 72px;
   color: #fff;
+}
+
+header h1 {
+  text-align: center;
+}
+
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
 }
 
 header nav ul li {
@@ -103,6 +124,11 @@ form button {
   padding: 15px;
   width: 100%;
 }
+.spacing {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 /* -------  Footer ------- */
 
@@ -117,3 +143,73 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media all and (min-width: 768px) {
+
+  /* Header */
+  header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 20px 10px;
+  }
+
+  header nav {
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Search box */
+
+  form {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .spacing {
+    display: flex;
+    flex-direction: column;
+    margin: 0 50px 0 0;
+  }
+
+  /* About */
+
+  .img-sizing {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+  }
+  .padding {
+    display:flex;
+    align-items: center;
+  
+  }
+
+  /* Ideas */
+
+  .picture-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .padding2 {
+    flex: 1 0 calc(35% - 20px);
+    margin: 5px;
+  }
+  .padding {
+    margin: 10px;
+  }
+
+  /* Host */
+  .host-alignment {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .padding3 {
+    margin-top: 30px;
+  }
+
+}
